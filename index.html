@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <title>Loan calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loan calculator💵</h1>
+      <form id="credit-form">
+        <div class="form-group">
+          <label for="loan-amount">Loan amount:</label>
+          <div id="loan-amount-error-msg"></div>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              id="loan-amount"
+              class="loan-amount"
+              min="1000"
+              max="50000"
+              step="100"
+              value="15000"
+              required
+            />
+            <span class="input-suffix">UAH</span>
+          </div>
+          <input
+            type="range"
+            id="loan-amount-range"
+            min="1000"
+            max="50000"
+            value="15000"
+            step="100"
+          />
+        </div>
+        <div class="form-group">
+          <label for="loan-period">Repayment period:</label>
+          <div id="loan-period-error-msg"></div>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              id="loan-period"
+              min="7"
+              max="60"
+              step="1"
+              value="30"
+              required
+            /><span class="input-suffix">📅</span>
+          </div>
+          <input
+            type="range"
+            id="loan-period-range"
+            min="7"
+            max="60"
+            value="30"
+            step="1"
+          />
+        </div>
+        <div class="output-group">
+          <label for="daily-repayment">Daily repayment amount:</label>
+          <output id="daily-repayment-output"></output>
+        </div>
+        <div class="output-group">
+          <label for="total-repayment">Total repayment amount:</label>
+          <output id="total-repayment-output"></output>
+        </div>
+        <button
+          type="submit"
+          id="calculate-button"
+        >
+          Get a loan 💰
+        </button>
+      </form>
+    </div>
+    <div id="submit-msg-container"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

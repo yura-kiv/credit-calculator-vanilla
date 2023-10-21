@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f4f4f4;
+  padding: 25px 15px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: fit-content;
+  width: 75%;
+  max-width: 600px;
+  min-width: 330px;
+}
+
+h1 {
+  color: #1b1b1b;
+}
+
+.form-group,
+.output-group {
+  margin: 20px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Number input styles */
+
+input[type="number"] {
+  position: relative;
+  width: 100%;
+  padding: 10px 50px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type="number"].error {
+  border: solid 2px rgb(255, 70, 70);
+}
+
+input[type="number"].error:focus {
+  color: black;
+  border: solid 2px red;
+  outline: none;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .input-suffix {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-80%);
+  color: #555;
+}
+
+#input-error-msg {
+  display: block;
+  color: rgb(255, 70, 70);
+  width: 100%;
+  padding: 10px;
+}
+
+/* Range input styles */
+
+input[type="range"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+input[type="range"]:active {
+  cursor: grabbing;
+}
+
+/* Submit form part*/
+
+#submit-msg-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+#success-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #69ff78;
+  padding: 20px 15px;
+  border-radius: 15px;
+}
+
+#success-msg span {
+  display: block;
+}
+
+#msg-close {
+  display: block;
+  padding: 5px 10px;
+  background-color: #5ce069;
+  border-radius: 20px;
+  cursor: pointer;
+}
